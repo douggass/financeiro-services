@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
+package com.mycompany.financeiroapi.DTO;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -11,10 +14,16 @@ package domain;
  */
 public class Financeiro {
 
+    @NotNull
+    @NotEmpty
     private String nomeCliente;
+
+    @NotNull
     private Double limiteCredito;
-    private Risco risco;
-    private Double taxa;
+
+    @NotNull
+    @NotEmpty
+    private String risco;
 
     public String getNomeCliente() {
         return nomeCliente;
@@ -32,20 +41,12 @@ public class Financeiro {
         this.limiteCredito = limiteCredito;
     }
 
-    public Risco getRisco() {
+    public String getRisco() {
         return risco;
     }
 
-    public void setRisco(Risco risco) {
+    public void setRisco(String risco) {
         this.risco = risco;
-    }
-
-    public Double getTaxa() {
-        return taxa;
-    }
-
-    public void setTaxa(Double taxa) {
-        this.taxa = taxa;
     }
 
 }

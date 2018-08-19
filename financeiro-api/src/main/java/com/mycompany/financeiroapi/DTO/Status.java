@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
+package com.mycompany.financeiroapi.DTO;
 
 /**
  *
  * @author douglasgass
  */
 public class Status {
+
     private String mensagem;
-    private int codigoMensagem;
+    private int codigo;
 
     public String getMensagem() {
         return mensagem;
@@ -21,13 +22,12 @@ public class Status {
         this.mensagem = mensagem;
     }
 
-    public int getCodigoMensagem() {
-        return codigoMensagem;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setCodigoMensagem(int codigoMensagem) {
-        this.codigoMensagem = codigoMensagem;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
-    
-    
+
 }
